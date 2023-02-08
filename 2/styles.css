@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+body {
+  background-color: hsl(27, 66%, 92%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+
+}
+
+hr {
+  color: hsl(0, 0%, 100%);
+  margin: 1.5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.top-container {
+  background-color: hsl(10, 79%, 65%);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+}
+
+@media (max-width: 500px) {
+  .top-container {
+    width: 300px;
+    padding: 1rem;
+    margin: 0px;
+
+  }
+
+  .bottom-container {
+    width: 300px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .chart {
+    width: 300px !important;
+  }
+
+  .balance {
+    margin-right: 1rem !important;
+    margin: 0px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px !important;
+  }
+
+  .spending {
+    font-size: 1.4rem !important;
+  }
+
+  .total {
+    font-size: 0.8rem;
+  }
+
+  .total-balance {
+    font-size: 2rem !important;
+    margin-right: 2rem;
+  }
+
+  .from-last-month {
+    font-size: 0.8rem !important;
+    margin: 0px !important;
+    margin-top: 1.3rem !important;
+  }
+
+}
+
+.bottom-container {
+  background-color: white;
+  color: hsl(25, 47%, 15%);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.balance {
+  padding: 0.5rem;
+  margin-right: 17rem;
+}
+
+.currency-balance {
+  font-size: 2rem;
+  margin-bottom: 0rem;
+  margin-top: 0.2rem;
+}
+
+.spending {
+  font-size: 1.7rem;
+  color: hsl(25, 47%, 15%);
+  margin-left: 1rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  color: hsl(28, 10%, 53%);
+  font-weight: 700;
+  margin-top: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
+.from-last-month {
+  margin-top: 1.5rem;
+  margin-left: 7rem;
+  display: flex;
+  font-size: 1rem;
+  text-align: bottom;
+  flex-direction: column;
+}
+
+.chart {
+  align-self: center;
+  width: 400px;
+}
+
+.total-balance {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: hsl(25, 47%, 15%);
+}
+
+.percentage {
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
+}

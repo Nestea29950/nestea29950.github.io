@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Expenses chart component</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <main>
+    <div class="top-container">  <div class="balance">
+      My balance
+        <h1 class="currency-balance">$921.48</h1>
+    </div><img src="./images/logo.svg"></div>
+    <div class="bottom-container">
+      <h1 class="spending">Spending - Last 7 days</h1>
+      <div class="chart">
+        <canvas id="myChart"></canvas>
+      </div>
+      <hr/>
+
+      <div class="stats">
+        <div class="total">
+          Total this month
+          <div class="total-balance">$478.33</div>
+        </div>
+        <div class="from-last-month">
+          <div class="percentage">+2.4%</div>
+          <div class="percentage-text">from last month</div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+
+  <script>
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+        datasets: [{
+          label: 'Spending ($)',
+          data: [17.45,34.91, 52.36, 31.07, 23.39, 43.28, 25.48],
+          backgroundColor: ['rgb(236, 119, 95, 1)'],
+          hoverBackgroundColor: ['hsl(186, 34%, 60%)'],
+          borderRadius: 4,
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+
+</body>
+
+<footer class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+  Coded by <a href="#">Salman Hossain</a>.
+</footer>
+
+</html>

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+}
+
+:root {
+    /* ### Primary */
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    /* ### Neutral */
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Dark-Blue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-Grayish-Blue);
+    max-width: 19rem;
+    min-width: 19rem;
+    max-height: 12rem;
+    min-height: 12rem;
+    border-radius: .5rem;
+    position: relative;
+    align-items: center;
+}
+
+.advise {
+    text-align: center;
+    color: var(--Neon-Green);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    padding: 1.5rem 0;
+    font-weight: 100;
+
+}
+
+.text {
+    color: var(--Light-Cyan);
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.separator {
+    position: absolute;
+    top: 9.5rem;
+
+}
+
+.button {
+    background-color: var(--Neon-Green);
+    position: absolute;
+    top: 10.8rem;
+    padding: 1.1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 35px -5px var(--Neon-Green);
+    z-index: 0;
+
+}
+
+.icon {
+    position: absolute;
+    z-index: 1;
+    top: 11.46rem;
+    cursor: pointer;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.separatorMobile {
+    display: none;
+}
+
+
+@media(max-width:540px) {
+
+    .separatorMobile {
+        display: block;
+        position: absolute;
+        top: 8.3rem;
+    
+    }
+
+    .separator {
+        display: none;
+    }
+
+    main {
+       
+        max-width: 12.3rem;
+        min-width: 12.3rem;
+        max-height: 10.5rem;
+        min-height: 10.5rem;
+        
+    }
+
+    .advise {
+        font-size: 11px;
+    }
+    
+    .text {
+        font-size: 20px;
+    }
+
+
+    .button {
+        top: 9.4rem;
+    }
+    
+    .icon {
+        top: 10rem;
+    }
+}

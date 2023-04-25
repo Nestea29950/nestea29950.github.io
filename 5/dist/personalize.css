@@ -1,0 +1,41 @@
+body {
+  background: #000
+    url("https://web.poecdn.com/protected/image/layout/crucible-bg.jpg?v=1680235310122&key=eWUOOCmfNaN7mG2fFatw5Q")
+    no-repeat top center fixed;
+  background-size: contain;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.main-content {
+  flex: 1;
+}
+.path-of-exile-table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #2b2e3b;
+  color: #b5b5b5;
+}
+
+.path-of-exile-table th,
+.path-of-exile-table td {
+  text-align: left;
+  padding: 8px;
+}
+
+.path-of-exile-table th {
+  background-color: #222533;
+  color: #b5b5b5;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.path-of-exile-table tbody tr:nth-child(even) {
+  background-color: #2d2f3a;
+}
+
+.path-of-exile-table tbody tr:hover {
+  background-color: #3d3f4a;
+}

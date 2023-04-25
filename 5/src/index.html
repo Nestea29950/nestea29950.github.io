@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/personalize.css" />
+    <title>Poe Account</title>
+  </head>
+  <body class="font-fontin">
+    <header>
+      <nav class="bg-gray-900">
+        <div class="mx-auto px-4 py-4 max-w-7xl sm:px-6 lg:px-8">
+          <div class="flex justify-between items-center">
+            <div class="flex-shrink-0">
+              <a href="#">
+                <img
+                  class=""
+                  src="https://upload.wikimedia.org/wikipedia/fr/0/08/Path_of_Exile_Logo.png"
+                  alt="Path of Exile logo"
+                  style="width: 80px"
+                />
+              </a>
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Accueil</a
+                >
+
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Jeux</a
+                >
+
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Forum</a
+                >
+
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Evénements</a
+                >
+
+                <a
+                  href="#"
+                  class="bg-red-600 hover:bg-red-700 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Boutique</a
+                >
+              </div>
+            </div>
+            <div class="-mr-2 flex md:hidden">
+              <button
+                type="button"
+                class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <!-- Heroicon name: menu -->
+                <svg
+                  class="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Accueil</a
+            >
+
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Jeu</a
+            >
+
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Forum</a
+            >
+
+            <a
+              href="#"
+              class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >Evénements</a
+            >
+
+            <a
+              href="#"
+              class="bg-red-600 hover:bg-red-700 block text-white px-3 py-2 rounded-md text-base font-medium"
+              >Sign up</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-content mt-20">
+      <div class="max-w-md mx-auto">
+        <div class="mb-4">
+          <label for="nom-du-compte" class="block text-white font-bold mb-2"
+            >Nom du compte:</label
+          >
+          <input
+            type="text"
+            id="nom-du-compte"
+            name="nom-du-compte"
+            class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            placeholder="Entrez le nom de votre compte"
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            onclick="getpoeprofil()"
+            class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-2 px-4 border border-gray-900 rounded shadow"
+          >
+            Envoyer
+          </button>
+        </div>
+      </div>
+    </div>
+    <table class="path-of-exile-table">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Ligue</th>
+          <th>Classe</th>
+          <th>Niveau</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+
+    <footer class="bg-white shadow dark:bg-gray-800">
+      <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+      >
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline"
+            >POE ACCOUNT™</a
+          >. All Rights Reserved.
+        </span>
+        <ul
+          class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"
+        >
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">A propos</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Accueil</a>
+          </li>
+          <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Evénements</a>
+          </li>
+          <li>
+            <a href="#" class="hover:underline">Boutique</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="../index.js"></script>
+  </body>
+</html>

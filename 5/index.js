@@ -2,7 +2,7 @@ function getpoeprofil() {
   let nomducompte = document.getElementById("nom-du-compte").value;
 
   $.ajax({
-    url: "https://www.pathofexile.com/character-window/get-characters",
+    url: "https://cors-anywhere.herokuapp.com/https://www.pathofexile.com/character-window/get-characters",
     data: {
       accountName: nomducompte,
     },
